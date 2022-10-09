@@ -1,3 +1,15 @@
-body {
-  background-color: aqua;
-}
+@import './utils/vars';
+@import './utils/common';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+@import './components/header';
+@import './components/hero';
+@import './components/features';
+@import './components/we-do';
+@import './components/our-team';
+@import './components/clients';
+@import './components/footer';
+@import './components/modal';
+
+@import './components/portfolio';
