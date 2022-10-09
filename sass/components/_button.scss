@@ -1,5 +1,4 @@
 .button,
-.subscription .btn,
 .userdata .btn {
   color: var(--primary-bkg-color);
   background-color: var(--accent-color);
@@ -14,4 +13,11 @@
   &:focus {
     background-color: #188ce8;
   }
+}
+
+.button__icon {
+  @extend %icon;
+}
+.button__icon--append {
+  margin-left: 10px;
 }

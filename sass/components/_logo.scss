@@ -4,13 +4,20 @@
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   @include font(700, 26px, 1.19);
-  margin-right: 93px;
 
   &__studio {
     color: #000000;
   }
 }
 
+.header__logo {
+  margin-right: 93px;
+}
+
 .footer__logo__studio {
   color: var(--primary-bkg-color);
+}
+.footer__logo {
+  margin-bottom: 20px;
+  margin-right: 0px;
 }

@@ -1,12 +1,14 @@
 .social {
   @extend %list;
   @include flex($alig: null);
-  margin-top: 16px;
   gap: 10px;
+
+  &__icon {
+    @extend %icon;
+  }
 }
 
-.social__link,
-.join .link {
+.social__link {
   @extend %link;
   @include flex();
   width: 44px;
@@ -17,13 +19,17 @@
   transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 
   &:hover,
-  &:focus,
-  .join .link:hover,
-  .join .link:focus {
+  &:focus {
     color: var(--primary-bkg-color);
     background-color: var(--accent-color);
   }
 }
-.social__icon {
-  @extend %icon;
+
+.join__social {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-bkg-color);
+}
+
+.ourteam__social {
+  margin-top: 16px;
 }
