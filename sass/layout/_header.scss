@@ -1,9 +1,6 @@
 .header {
   border-bottom: 1px solid #ececec;
 }
-.header a {
-  display: block;
-}
 
 .header__container {
   @extend %container;
@@ -13,64 +10,66 @@
   @include flex($just: null);
 }
 .nav__list {
-  display: flex;
+  @extend %flex;
   @extend %list;
+  & :not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
-.nav__list :not(:last-child) {
-  margin-right: 50px;
-}
-
-.nav-link .link {
+.nav__list__link {
+  display: block;
+  @extend %link;
   color: var(--secondary-text-color);
-  font-weight: 500;
-  line-height: 1.14;
+  @include font(500, null, 1.14);
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
-.nav-link .link:hover,
-.nav-link .link:focus {
-  color: var(--accent-color);
-}
-.current.link {
+
+.nav__list__link--current {
   position: relative;
   color: var(--accent-color);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
 }
 
-.current.link::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-}
-/* contact */
 .contact {
-  display: flex;
-}
-.contact > li:not(:last-child) {
-  margin-right: 50px;
+  @extend %list;
+  @extend %flex;
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
-.contact .link {
+.contact__link {
   @include flex($just: null);
+  @extend %link;
   color: var(--primary-text-color);
-  font-weight: 500;
-  line-height: 1.14;
+  @include font(500, null, 1.14);
   letter-spacing: 0.02em;
   padding: 32px 0px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contact .link:hover,
-.contact .link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.contact .icon {
+.contact__icon {
+  @extend %icon;
   margin-right: 10px;
 }

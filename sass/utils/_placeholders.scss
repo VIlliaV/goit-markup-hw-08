@@ -1,10 +1,16 @@
+// @extend %section;
+// @extend %container;
+// @extend %list;
+// @extend %link;
+// @extend %title;
+// @extend %icon;
+// @extend %vis-hide;
+// @extend %flex;
+
 %section {
   padding: 94px 0;
 }
 
-.section {
-  padding: 94px 0;
-}
 %container {
   width: 1200px;
   height: 100%;
@@ -13,23 +19,14 @@
   padding-right: 15px;
 }
 
-.container {
-  width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+%flex {
+  display: flex;
 }
 %list {
   list-style: none;
 }
-.list {
-  list-style: none;
-}
+
 %link {
-  text-decoration: none;
-}
-.link {
   text-decoration: none;
 }
 
@@ -39,29 +36,12 @@
   font-size: 36px;
   line-height: 1.16;
 }
-.title {
-  color: var(--secondary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-}
+
 %icon {
   fill: currentColor;
 }
 
-.icon {
-  fill: currentColor;
-}
-
 %vis-hide {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-/* hide title */
-.visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
