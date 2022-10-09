@@ -4,27 +4,21 @@
 .header a {
   display: block;
 }
-// .header > .container {
-//   justify-content: space-between;
-// }
 
-.header > .container {
+.header__container {
+  @extend %container;
   @include flex($just: space-between);
 }
-.nav,
-.contact .link {
+.nav {
   @include flex($just: null);
 }
-.nav-link,
-.contact {
+.nav__list {
   display: flex;
+  @extend %list;
 }
 
-.nav-link :not(:last-child) {
+.nav__list :not(:last-child) {
   margin-right: 50px;
-}
-.nav .studio {
-  color: #000000;
 }
 
 .nav-link .link {
@@ -56,11 +50,15 @@
   border-radius: 2px;
 }
 /* contact */
+.contact {
+  display: flex;
+}
 .contact > li:not(:last-child) {
   margin-right: 50px;
 }
 
 .contact .link {
+  @include flex($just: null);
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
