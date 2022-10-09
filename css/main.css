@@ -60,11 +60,11 @@ button {
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.features, .hero {
+.we-do, .features, .hero {
   padding: 94px 0;
 }
 
-.features__container, .hero__container, .header__container {
+.we-do__container, .features__container, .hero__container, .header__container {
   width: 1200px;
   height: 100%;
   margin: 0 auto;
@@ -72,13 +72,13 @@ button {
   padding-right: 15px;
 }
 
-.feat-list, .contact, .nav__list {
+.we-do__list, .feat-list, .contact, .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.feat-list, .contact, .nav__list {
+.we-do__list, .feat-list, .contact, .nav__list {
   list-style: none;
 }
 
@@ -86,7 +86,7 @@ button {
   text-decoration: none;
 }
 
-.feat-list__title {
+.we-do__title, .feat-list__title {
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -251,30 +251,24 @@ button {
   margin-bottom: 10px;
 }
 
-.wedo.section {
+.we-do {
   padding-top: 47px;
 }
 
-.do > .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
-
-.do .title {
+.we-do__title {
   text-align: center;
-}
-
-.do > .title {
   margin-bottom: 50px;
 }
 
-.do li {
+.we-do__list {
+  gap: 30px;
+}
+
+.we-do__item {
   position: relative;
 }
 
-.do .text {
+.we-do__text {
   position: absolute;
   bottom: 0;
   left: 0;

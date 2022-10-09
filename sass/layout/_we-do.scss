@@ -1,22 +1,26 @@
-.wedo.section {
+.we-do {
+  @extend %section;
   padding-top: 47px;
 }
-.do > .list {
-  display: flex;
+.we-do__container {
+  @extend %container;
+}
+.we-do__title {
+  @extend %title;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.we-do__list {
+  @extend %list;
+  @extend %flex;
   gap: 30px;
 }
 
-.do .title {
-  text-align: center;
-}
-.do > .title {
-  margin-bottom: 50px;
-}
-.do li {
+.we-do__item {
   position: relative;
 }
 
-.do .text {
+.we-do__text {
   position: absolute;
   bottom: 0;
   left: 0;
