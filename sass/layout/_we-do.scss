@@ -1,0 +1,30 @@
+.wedo.section {
+  padding-top: 47px;
+}
+.do > .list {
+  display: flex;
+  gap: 30px;
+}
+
+.do .title {
+  text-align: center;
+}
+.do > .title {
+  margin-bottom: 50px;
+}
+.do li {
+  position: relative;
+}
+
+.do .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include flex();
+  @include font(700, 14px, 1.14);
+  text-transform: uppercase;
+  height: 70px;
+  width: 100%;
+  color: var(--primary-bkg-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}

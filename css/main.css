@@ -259,6 +259,111 @@ button {
   margin-bottom: 10px;
 }
 
+.wedo.section {
+  padding-top: 47px;
+}
+
+.do > .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.do .title {
+  text-align: center;
+}
+
+.do > .title {
+  margin-bottom: 50px;
+}
+
+.do li {
+  position: relative;
+}
+
+.do .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  height: 70px;
+  width: 100%;
+  color: var(--primary-bkg-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.ourteam {
+  background-color: var(--secondary-bkg-color);
+}
+
+.team > .title {
+  margin-bottom: 50px;
+}
+
+.team .title {
+  text-align: center;
+}
+
+.team > .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.team-item {
+  background-color: var(--primary-bkg-color);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  margin-bottom: 10px;
+}
+
+.team-item .text {
+  text-align: center;
+  line-height: 1.18;
+}
+
+.team-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-box .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 16px;
+  gap: 10px;
+}
+
+.team-box .link {
+  background-color: var(--primary-bkg-color);
+  color: var(--icon-color);
+}
+
 .logo {
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
@@ -292,4 +397,30 @@ button {
 .userdata .btn:hover,
 .userdata .btn:focus {
   background-color: #188ce8;
+}
+
+.team-box .link,
+.join .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  -webkit-transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+}
+
+.team-box .link:hover,
+.team-box .link:focus,
+.join .link:hover,
+.join .link:focus {
+  color: var(--primary-bkg-color);
+  background-color: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */
