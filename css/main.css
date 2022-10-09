@@ -1,13 +1,3 @@
-:root {
-  --primary-text-color: #757575;
-  --primary-bkg-color: #ffffff;
-  --secondary-text-color: #212121;
-  --secondary-bkg-color: #f5f4fa;
-  --accent-color: #2196f3;
-  --thirdary-bkg-color: #2f303a;
-  --icon-color: #afb1b8;
-}
-
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-bkg-color);
@@ -54,6 +44,16 @@ button {
   text-align: center;
 }
 
+:root {
+  --primary-text-color: #757575;
+  --primary-bkg-color: #ffffff;
+  --secondary-text-color: #212121;
+  --secondary-bkg-color: #f5f4fa;
+  --accent-color: #2196f3;
+  --thirdary-bkg-color: #2f303a;
+  --icon-color: #afb1b8;
+}
+
 .section {
   padding: 94px 0;
 }
@@ -83,4 +83,18 @@ button {
 
 .icon {
   fill: currentColor;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header a {
+  display: block;
+}
+
+.header > .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */
