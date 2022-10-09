@@ -60,11 +60,11 @@ button {
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero {
+.features, .hero {
   padding: 94px 0;
 }
 
-.hero__container, .header__container {
+.features__container, .hero__container, .header__container {
   width: 1200px;
   height: 100%;
   margin: 0 auto;
@@ -72,13 +72,13 @@ button {
   padding-right: 15px;
 }
 
-.contact, .nav__list {
+.feat-list, .contact, .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contact, .nav__list {
+.feat-list, .contact, .nav__list {
   list-style: none;
 }
 
@@ -86,8 +86,23 @@ button {
   text-decoration: none;
 }
 
-.contact__icon {
+.feat-list__title {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+}
+
+.feat-list__icon, .contact__icon {
   fill: currentColor;
+}
+
+.features__title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .header {
@@ -201,19 +216,19 @@ button {
   margin: 0px auto 30px auto;
 }
 
-.features.section {
+.features {
   padding-bottom: 47px;
 }
 
-.feat-item {
+.feat-list {
+  gap: 30px;
+}
+
+.feat-list__item {
   width: 270px;
 }
 
-.feat-icon {
-  margin-bottom: 30px;
-  background: var(--secondary-bkg-color);
-  border-radius: 4px;
-  height: 120px;
+.feat-list__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,16 +238,13 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 30px;
+  background: var(--secondary-bkg-color);
+  border-radius: 4px;
+  height: 120px;
 }
 
-.feat > .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
-
-.feat .title {
+.feat-list__title {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -856,7 +868,7 @@ button {
   color: var(--primary-bkg-color);
 }
 
-.hero .button,
+.button,
 .subscription .btn,
 .userdata .btn {
   color: var(--primary-bkg-color);
@@ -872,9 +884,7 @@ button {
   -webkit-transition: background-color 250ms var(--cubic);
   transition: background-color 250ms var(--cubic);
 }
-
-.hero .button:hover,
-.hero .button:focus,
+.button:hover, .button:focus,
 .subscription .btn:hover,
 .subscription .btn:focus,
 .userdata .btn:hover,

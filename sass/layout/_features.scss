@@ -1,25 +1,36 @@
-.features.section {
+.features {
+  @extend %section;
   padding-bottom: 47px;
 }
-.feat-item {
+.features__container {
+  @extend %container;
+}
+.features__title {
+  @extend %vis-hide;
+}
+.feat-list {
+  @extend %list;
+  @extend %flex;
+  gap: 30px;
+}
+
+.feat-list__item {
   width: 270px;
 }
 
-.feat-icon {
+.feat-list__block {
+  @include flex();
   margin-bottom: 30px;
   background: var(--secondary-bkg-color);
   border-radius: 4px;
   height: 120px;
-
-  @include flex();
 }
-.feat > .list {
-  display: flex;
-  gap: 30px;
+.feat-list__icon {
+  @extend %icon;
 }
-
-.feat .title {
+.feat-list__title {
   @include font(null, 14px, 1.14);
+  @extend %title;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
