@@ -60,11 +60,11 @@ button {
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ourteam, .we-do, .features, .hero {
+.clients, .ourteam, .we-do, .features, .hero {
   padding: 94px 0;
 }
 
-.ourteam__container, .we-do__container, .features__container, .hero__container, .header__container {
+.clients__container, .ourteam__container, .we-do__container, .features__container, .hero__container, .header__container {
   width: 1200px;
   height: 100%;
   margin: 0 auto;
@@ -72,29 +72,29 @@ button {
   padding-right: 15px;
 }
 
-.ourteam__list, .we-do__list, .feat-list, .contact, .nav__list {
+.clients__list, .ourteam__list, .we-do__list, .feat-list, .contact, .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.social, .ourteam__item, .ourteam__list, .we-do__list, .feat-list, .contact, .nav__list {
+.social, .clients__list, .ourteam__item, .ourteam__list, .we-do__list, .feat-list, .contact, .nav__list {
   list-style: none;
 }
 
 .social__link,
-.join .link, .logo, .contact__link, .nav__link {
+.join .link, .logo, .clients__link, .contact__link, .nav__link {
   text-decoration: none;
 }
 
-.ourteam__name, .ourteam__title, .we-do__title, .feat-list__title {
+.clients__title, .ourteam__name, .ourteam__title, .we-do__title, .feat-list__title {
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
 }
 
-.social__icon, .feat-list__icon, .contact__icon {
+.social__icon, .clients__icon, .feat-list__icon, .contact__icon {
   fill: currentColor;
 }
 
@@ -330,14 +330,16 @@ button {
   line-height: 1.18;
 }
 
-.clients .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.clients__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients__list {
   gap: 30px;
 }
 
-.clients .link {
+.clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,23 +351,15 @@ button {
           align-items: center;
   width: 170px;
   height: 92px;
-  align-items: center;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
   -webkit-transition: color 250ms var(--cubic), border 250ms var(--cubic);
   transition: color 250ms var(--cubic), border 250ms var(--cubic);
 }
-
-.clients .link:hover,
-.clients .link:focus {
+.clients__link:hover, .clients__link:focus {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
-}
-
-.clients .title {
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 .footer .container {
