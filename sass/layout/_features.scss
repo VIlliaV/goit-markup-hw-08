@@ -1,0 +1,25 @@
+.features.section {
+  padding-bottom: 47px;
+}
+.feat-item {
+  width: 270px;
+}
+
+.feat-icon {
+  margin-bottom: 30px;
+  background: var(--secondary-bkg-color);
+  border-radius: 4px;
+  height: 120px;
+
+  @include flex();
+}
+.feat > .list {
+  display: flex;
+  gap: 30px;
+}
+
+.feat .title {
+  @include font(null, 14px, 1.14);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}

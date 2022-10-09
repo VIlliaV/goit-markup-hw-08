@@ -8,9 +8,6 @@
 
 /* header */
 
-.nav-link,
-.contact,
-.feat > .list,
 .do > .list,
 .team > .list,
 .clients .list,
@@ -20,7 +17,6 @@
   display: flex;
 }
 
-.feat-icon,
 .team-box .list,
 .team-box .link,
 .do .text,
@@ -32,14 +28,6 @@
   justify-content: center;
 }
 
-.header > .container,
-.nav,
-.contact .link {
-  display: flex;
-  align-items: center;
-}
-
-.feat > .list,
 .do > .list,
 .team > .list,
 .clients .list,
@@ -47,159 +35,18 @@
   gap: 30px;
 }
 
-.logo {
-  color: var(--accent-color);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  margin-right: 93px;
-}
-.nav-link :not(:last-child) {
-  margin-right: 50px;
-}
-.nav .studio {
-  color: #000000;
-}
-
-.nav-link .link {
-  color: var(--secondary-text-color);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav-link .link:hover,
-.nav-link .link:focus {
-  color: var(--accent-color);
-}
-.current.link {
-  position: relative;
-  color: var(--accent-color);
-}
-
-.current.link::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-}
-
-/* contact */
-.contact > li:not(:last-child) {
-  margin-right: 50px;
-}
-
-.contact .link {
-  color: var(--primary-text-color);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding: 32px 0px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contact .link:hover,
-.contact .link:focus {
-  color: var(--accent-color);
-}
-
-.contact .icon {
-  margin-right: 10px;
-}
-
 /* INDEX.HTML */
 
 /* Hero */
 
-.hero {
-  background-color: var(--thirdary-bkg-color);
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url('../images/hero-bkg.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.hero .container {
-  padding-top: 106px;
-  padding-bottom: 106px;
-  text-align: center;
-}
-.title-hero {
-  color: var(--primary-bkg-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  width: 696px;
-  margin: 0px auto 30px auto;
-}
-
-.hero .button,
-.subscription .btn,
-.userdata .btn {
-  color: var(--primary-bkg-color);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  height: 50px;
-  padding: 10px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hero .button:hover,
-.hero .button:focus,
-.subscription .btn:hover,
-.subscription .btn:focus,
-.userdata .btn:hover,
-.userdata .btn:focus {
-  background-color: #188ce8;
-}
-
 /* features */
-.features.section {
-  padding-bottom: 47px;
-}
-.feat-item {
-  width: 270px;
-}
 
-/* hide title */
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-.feat-icon {
-  margin-bottom: 30px;
-  background: var(--secondary-bkg-color);
-  border-radius: 4px;
-  height: 120px;
-  align-items: center;
-}
-
-.feat .title,
 .join .invite,
 .do .text,
 .subscrip .text {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-}
-.feat .title {
-  margin-bottom: 10px;
 }
 
 /* we do */
@@ -270,8 +117,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 .team-box .link {
   background-color: var(--primary-bkg-color);
@@ -295,8 +141,7 @@
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cubic), border 250ms var(--cubic);
 }
 
 .clients .link:hover,
@@ -330,7 +175,7 @@
 .address .link {
   display: block;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cubic);
 }
 .address .link:hover,
 .address .link:focus {
@@ -386,7 +231,7 @@
   border-radius: 4px;
   background-color: var(--thirdary-bkg-color);
   color: rgba(255, 255, 255, 0.6);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms var(--cubic);
 }
 .subscription .input:focus {
   border: 1px solid var(--accent-color);
@@ -415,8 +260,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
-  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1000ms var(--cubic), visibility 1000ms var(--cubic);
 }
 
 .backdrop.is-hidden {
@@ -439,7 +283,7 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1000ms var(--cubic);
 }
 
 .btn-modal {
@@ -454,7 +298,7 @@
   border-radius: 50%;
   align-items: center;
   color: #000000;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cubic);
 }
 .btn-modal:hover,
 .btn-modal:focus {
@@ -497,7 +341,7 @@
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms var(--cubic);
 }
 .userdata .input:focus {
   border: 1px solid var(--accent-color);
@@ -508,7 +352,7 @@
   translate: 0 -50%;
   left: 10px;
   color: var(--secondary-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cubic);
 }
 .userdata .input:focus + .icon {
   color: var(--accent-color);
@@ -521,7 +365,7 @@
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms var(--cubic);
 }
 .userdata .area:focus {
   border: 1px solid var(--accent-color);
@@ -581,9 +425,8 @@
   line-height: 1.62;
   letter-spacing: 0.03em;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
 }
 .portfolio .button:hover,
 .portfolio .button:focus {
@@ -597,7 +440,7 @@
 }
 .portf-list > li {
   flex-basis: calc((100% - 60px) / 3);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--cubic);
 }
 .portf-list > li:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -618,7 +461,7 @@
   color: var(--primary-bkg-color);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--cubic);
 }
 
 .portf-list li:hover .portf-img > .text {
