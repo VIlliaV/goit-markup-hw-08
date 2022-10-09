@@ -5,10 +5,12 @@
   font-family: 'Raleway', sans-serif;
   @include font(700, 26px, 1.19);
   margin-right: 93px;
+
+  &__studio {
+    color: #000000;
+  }
 }
-.logo__studio {
-  color: #000000;
-}
+
 .footer__logo__studio {
   color: var(--primary-bkg-color);
 }

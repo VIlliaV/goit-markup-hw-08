@@ -17,7 +17,7 @@
   }
 }
 
-.nav__list__link {
+.nav__link {
   display: block;
   @extend %link;
   color: var(--secondary-text-color);
@@ -32,7 +32,7 @@
   }
 }
 
-.nav__list__link--current {
+.nav__link--current {
   position: relative;
   color: var(--accent-color);
   &::after {
@@ -58,9 +58,9 @@
 .contact__link {
   @include flex($just: null);
   @extend %link;
-  color: var(--primary-text-color);
   @include font(500, null, 1.14);
   letter-spacing: 0.02em;
+  color: var(--primary-text-color);
   padding: 32px 0px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
