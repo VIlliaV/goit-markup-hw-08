@@ -17,7 +17,7 @@
 }
 .nav-link,
 .contact {
-  @include flex(flex, null, null);
+  display: flex;
 }
 
 .nav-link :not(:last-child) {

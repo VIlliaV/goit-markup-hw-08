@@ -1,3 +1,9 @@
+/* *,
+*::after,
+* ::before {
+  outline: 1px solid red;
+} */
+
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-bkg-color);
