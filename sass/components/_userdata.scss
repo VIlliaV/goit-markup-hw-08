@@ -1,0 +1,111 @@
+%userfont {
+  display: block;
+  @include font(null, 12px, 1.17);
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.userdata {
+  padding: 40px;
+}
+.userdata__title {
+  @include font(700, 20px, 1.15);
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 12px;
+}
+.userdata__list {
+  @extend %list;
+}
+@each $user in username, usertel, useremail {
+  .#{$user} {
+    @extend %userfont;
+    margin-bottom: 4px;
+  }
+  .#{$user}__field {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .#{$user}__input {
+    @extend %userfont;
+    width: 100%;
+    height: 40px;
+    padding-left: 31px;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border 250ms var(--cubic);
+
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
+    &:focus + .#{$user}__icon {
+      color: var(--accent-color);
+    }
+  }
+  .#{$user}__icon {
+    @extend %icon;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: 10px;
+    color: var(--secondary-text-color);
+    transition: color 250ms var(--cubic);
+  }
+}
+.comment {
+  @extend %userfont;
+  margin-bottom: 4px;
+}
+
+.comment__area {
+  @extend %userfont;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms var(--cubic);
+
+  &:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.applybox {
+  position: relative;
+  @include flex($alig: null);
+  margin-bottom: 30px;
+}
+.applybox__check {
+  appearance: none;
+  &:checked + .applybox__conditions > &-icon {
+    background-origin: border-box;
+    background-size: contain;
+    background-image: url(../images/icon-check.svg);
+    border-color: transparent;
+  }
+}
+.applybox__link {
+  color: var(--accent-color);
+}
+.applybox__check-icon {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  width: 16px;
+  height: 15px;
+  translate: 0 -50%;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+}
+
+.userdata__button {
+  display: block;
+  margin: 0 auto;
+}

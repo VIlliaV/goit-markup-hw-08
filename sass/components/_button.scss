@@ -1,5 +1,4 @@
-.button,
-.userdata .btn {
+.button {
   color: var(--primary-bkg-color);
   background-color: var(--accent-color);
   @include font(700, null, 1.88);
@@ -20,4 +19,29 @@
 }
 .button__icon--append {
   margin-left: 10px;
+}
+
+.btn-close {
+  position: absolute;
+  @include flex();
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-bkg-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  color: #000000;
+  transition: color 250ms var(--cubic);
+
+  &__icon {
+    @extend %icon;
+  }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.modal__btn-close {
+  top: 8px;
+  right: 8px;
 }
