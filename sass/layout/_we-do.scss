@@ -1,10 +1,7 @@
 .we-do {
-  @extend %section;
   padding-top: 47px;
 }
-.we-do__container {
-  @extend %container;
-}
+
 .we-do__title {
   @extend %title;
   text-align: center;
@@ -12,7 +9,7 @@
 }
 .we-do__list {
   @extend %list;
-  @extend %flex;
+  display: flex;
   gap: 30px;
 }
 

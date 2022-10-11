@@ -20,7 +20,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container">
+      <div class="container header__container">
         <nav class="nav">
           <a class="logo header__logo" href="./index.html" lang="en">
             Web<span class="logo__studio">Studio</span></a
@@ -61,159 +61,179 @@
     </header>
     <main>
       <!-- HERO -->
-      <section class="section">
-        <div class="portfolio container">
+      <section class="portfolio section">
+        <div class="container">
           <!-- hide title -->
-          <h1 class="visually-hidden">Портфоліо</h1>
-          <ul class="btn-list list">
-            <li><button class="button" type="button">Усі</button></li>
-            <li><button class="button" type="button">Веб-сайти</button></li>
-            <li><button class="button" type="button">Додатки</button></li>
-            <li><button class="button" type="button">Дизайн</button></li>
-            <li><button class="button" type="button">Маркетинг</button></li>
-          </ul>
-          <ul class="portf-list list">
+          <h1 class="portfolio__title">Портфоліо</h1>
+          <ul class="portfolio__radiobuttons">
             <li>
-              <div class="portf-img">
+              <button class="portfolio__radiobutton" type="button">Усі</button>
+            </li>
+            <li>
+              <button class="portfolio__radiobutton" type="button">
+                Веб-сайти
+              </button>
+            </li>
+            <li>
+              <button class="portfolio__radiobutton" type="button">
+                Додатки
+              </button>
+            </li>
+            <li>
+              <button class="portfolio__radiobutton" type="button">
+                Дизайн
+              </button>
+            </li>
+            <li>
+              <button class="portfolio__radiobutton" type="button">
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img src="./images/portfolio1.jpg" alt="ноутбук" width="370" />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="portf-inner">
-                <h2 class="title">Технокряк</h2>
-                <p class="text">Веб-сайт</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">Технокряк</h2>
+                <p class="projects__choice">Веб-сайт</p>
               </div>
             </li>
-            <li>
-              <div class="portf-img">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img
                   src="./images/portfolio2.jpg"
                   alt="двоє грають в баскетбол"
                   width="370"
                 />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="portf-inner">
-                <h2 class="title">Постер New Orlean vs Golden Star</h2>
-                <p class="text">Дизайн</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">
+                  Постер New Orlean vs Golden Star
+                </h2>
+                <p class="projects__choice">Дизайн</p>
               </div>
             </li>
-            <li>
-              <div class="portf-img">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img
                   src="./images/portfolio3.jpg"
                   alt="лого ресторана сеафуд"
                   width="370"
                 />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="portf-inner">
-                <h2 class="title">Ресторан Seafood</h2>
-                <p class="text">Додаток</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">Ресторан Seafood</h2>
+                <p class="projects__choice">Додаток</p>
               </div>
             </li>
-            <li>
-              <div class="portf-img">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img
                   src="./images/portfolio4.jpg"
                   alt="навушники"
                   width="370"
                 />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="portf-inner">
-                <h2 class="title">Проєкт Prime</h2>
-                <p class="text">Маркетинг</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">Проєкт Prime</h2>
+                <p class="projects__choice">Маркетинг</p>
               </div>
             </li>
-            <li>
-              <div class="portf-img">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img src="./images/portfolio5.jpg" alt="коробки" width="370" />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
 
-              <div class="portf-inner">
-                <h2 class="title">Проєкт Boxes</h2>
-                <p class="text">Додаток</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">Проєкт Boxes</h2>
+                <p class="projects__choice">Додаток</p>
               </div>
             </li>
-            <li>
-              <div class="portf-img">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img src="./images/portfolio6.jpg" alt="монітор" width="370" />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="portf-inner">
-                <h2 class="title">Inspiration has no Borders</h2>
-                <p class="text">Веб-сайт</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">Inspiration has no Borders</h2>
+                <p class="projects__choice">Веб-сайт</p>
               </div>
             </li>
-            <li>
-              <div class="portf-img">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img src="./images/portfolio7.jpg" alt="книжка" width="370" />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="portf-inner">
-                <h2 class="title">Видання Limited Edition</h2>
-                <p class="text">Дизайн</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">Видання Limited Edition</h2>
+                <p class="projects__choice">Дизайн</p>
               </div>
             </li>
-            <li>
-              <div class="portf-img">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img src="./images/portfolio8.jpg" alt="бірка" width="370" />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="portf-inner">
-                <h2 class="title">Проєкт LAB</h2>
-                <p class="text">Маркетинг</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">Проєкт LAB</h2>
+                <p class="projects__choice">Маркетинг</p>
               </div>
             </li>
-            <li>
-              <div class="portf-img">
+            <li class="projects__item">
+              <div class="projects__img">
                 <img
                   src="./images/portfolio9.jpg"
                   alt="робота на ноутбуці"
                   width="370"
                 />
-                <p class="text">
+                <p class="projects__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
                 </p>
               </div>
-              <div class="portf-inner">
-                <h2 class="title">Growing Business</h2>
-                <p class="text">Додаток</p>
+              <div class="projects__inner">
+                <h2 class="projects__title">Growing Business</h2>
+                <p class="projects__choice">Додаток</p>
               </div>
             </li>
           </ul>
@@ -221,7 +241,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__container">
+      <div class="container footer__container">
         <div class="footer__address">
           <a class="logo footer__logo" href="./index.html"
             >Web<span class="logo__studio footer__logo__studio">Studio</span></a

@@ -1,16 +1,13 @@
 .features {
-  @extend %section;
   padding-bottom: 47px;
 }
-.features__container {
-  @extend %container;
-}
+
 .features__title {
   @extend %vis-hide;
 }
 .feat-list {
   @extend %list;
-  @extend %flex;
+  display: flex;
   gap: 30px;
 }
 

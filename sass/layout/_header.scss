@@ -3,14 +3,13 @@
 }
 
 .header__container {
-  @extend %container;
   @include flex($just: space-between);
 }
 .nav {
   @include flex($just: null);
 }
 .nav__list {
-  @extend %flex;
+  display: flex;
   @extend %list;
   & :not(:last-child) {
     margin-right: 50px;
@@ -49,7 +48,7 @@
 
 .contact {
   @extend %list;
-  @extend %flex;
+  display: flex;
   &__item:not(:last-child) {
     margin-right: 50px;
   }

@@ -18,7 +18,7 @@
   @extend %list;
 }
 @each $user in username, usertel, useremail {
-  .#{$user} {
+  .#{$user}__text {
     @extend %userfont;
     margin-bottom: 4px;
   }

@@ -4,6 +4,12 @@
 @import './utils/placeholders';
 @import './utils/mixins';
 
+@import './components/modal';
+@import './components/logo';
+@import './components/button';
+@import './components/social';
+@import './components/userdata';
+
 @import './layout/header';
 @import './layout/hero';
 @import './layout/features';
@@ -11,11 +17,4 @@
 @import './layout/our-team';
 @import './layout/clients';
 @import './layout/footer';
-
 @import './layout/portfolio';
-
-@import './components/modal';
-@import './components/logo';
-@import './components/button';
-@import './components/social';
-@import './components/userdata';
