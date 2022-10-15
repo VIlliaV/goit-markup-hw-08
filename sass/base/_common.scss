@@ -13,7 +13,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  min-width: 1200px;
 }
 
 /* constant identical properties */
@@ -48,12 +47,23 @@ button {
   text-align: center;
 }
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include desk-min {
+    padding: 94px 0;
+  }
 }
 .container {
-  width: 1200px;
   height: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  @include mob-min {
+    width: 480px;
+  }
+  @include tab-min {
+    width: 768px;
+  }
+  @include desk-min {
+    width: 1200px;
+  }
 }

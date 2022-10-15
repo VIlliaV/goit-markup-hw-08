@@ -1,0 +1,25 @@
+@mixin mob-min {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+@mixin mob-max {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}
+@mixin tab-min {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin tab-max {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin desk-min {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

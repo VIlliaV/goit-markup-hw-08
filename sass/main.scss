@@ -1,8 +1,9 @@
+@import './base/media';
 @import './base/common';
 
 @import './utils/vars';
-@import './utils/placeholders';
 @import './utils/mixins';
+@import './utils/placeholders';
 
 @import './components/modal';
 @import './components/logo';
