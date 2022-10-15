@@ -278,4 +278,34 @@ button {
   .contact__icon {
     margin-right: 10px;
   }
+}
+
+.hero {
+  background-color: var(--thirdary-bkg-color);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bkg.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bkg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1200px) {
+  .hero {
+    background-size: cover;
+  }
+}
+
+.hero__container {
+  padding-top: 106px;
+  padding-bottom: 106px;
+  text-align: center;
+}
+
+.hero__title {
+  color: var(--primary-bkg-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: 696px;
+  margin: 0px auto 30px auto;
 }/*# sourceMappingURL=main.css.map */
