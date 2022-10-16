@@ -27,6 +27,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.ourteam__img {
+  @include mob-max {
+    width: calc(100vw - 30px);
+    margin: 0px;
+  }
+}
 .ourteam__box {
   padding-top: 30px;
   padding-bottom: 24px;
