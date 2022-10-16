@@ -91,11 +91,11 @@ button {
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ourteam__item, .ourteam__list, .we-do__list, .feat-list, .contact, .nav__list {
+.ourteam__item, .ourteam__list, .we-do__list, .feat-list, .contact, .nav__list, .social {
   list-style: none;
 }
 
-.contact__link, .nav__link, .logo {
+.contact__link, .nav__link, .social__link, .logo {
   text-decoration: none;
 }
 
@@ -112,7 +112,7 @@ button {
   }
 }
 
-.feat-list__icon, .contact__icon, .button__icon {
+.feat-list__icon, .contact__icon, .social__icon, .button__icon {
   fill: currentColor;
 }
 
@@ -181,6 +181,12 @@ button {
   -webkit-transition: background-color 250ms var(--cubic);
   transition: background-color 250ms var(--cubic);
 }
+@media screen and (max-width: 250px) {
+  .button {
+    min-width: 100px;
+    height: 100px;
+  }
+}
 .button:hover, .button:focus {
   background-color: #188ce8;
 }
@@ -192,6 +198,53 @@ button {
 .modal__btn-close {
   top: 8px;
   right: 8px;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-bkg-color);
+  color: var(--icon-color);
+  -webkit-transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+}
+@media screen and (max-width: 250px) {
+  .social__link {
+    width: 22px;
+    height: 22px;
+  }
+}
+.social__link:hover, .social__link:focus {
+  color: var(--primary-bkg-color);
+  background-color: var(--accent-color);
+}
+
+.join__social {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-bkg-color);
+}
+
+.ourteam__social {
+  margin-top: 16px;
 }
 
 .header {
@@ -554,6 +607,11 @@ button {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (max-width: 767px) {
+  .ourteam__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 479px) {

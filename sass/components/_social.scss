@@ -1,35 +1,39 @@
-// .social {
-//   @extend %list;
-//   @include flex($alig: null);
-//   gap: 10px;
+.social {
+  @extend %list;
+  @include flex($alig: null);
+  gap: 10px;
 
-//   &__icon {
-//     @extend %icon;
-//   }
-// }
+  &__icon {
+    @extend %icon;
+  }
+}
 
-// .social__link {
-//   @extend %link;
-//   @include flex();
-//   width: 44px;
-//   height: 44px;
-//   border-radius: 50%;
-//   background-color: var(--primary-bkg-color);
-//   color: var(--icon-color);
-//   transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+.social__link {
+  @extend %link;
+  @include flex();
+  width: 44px;
+  height: 44px;
+  @media screen and (max-width: 250px) {
+    width: 22px;
+    height: 22px;
+  }
+  border-radius: 50%;
+  background-color: var(--primary-bkg-color);
+  color: var(--icon-color);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 
-//   &:hover,
-//   &:focus {
-//     color: var(--primary-bkg-color);
-//     background-color: var(--accent-color);
-//   }
-// }
+  &:hover,
+  &:focus {
+    color: var(--primary-bkg-color);
+    background-color: var(--accent-color);
+  }
+}
 
-// .join__social {
-//   background-color: rgba(255, 255, 255, 0.1);
-//   color: var(--primary-bkg-color);
-// }
+.join__social {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-bkg-color);
+}
 
-// .ourteam__social {
-//   margin-top: 16px;
-// }
+.ourteam__social {
+  margin-top: 16px;
+}
