@@ -1,33 +1,47 @@
-// .features {
-//   padding-bottom: 47px;
-// }
+.features {
+  @include desk-min {
+    padding-bottom: 47px;
+  }
+}
 
-// .features__title {
-//   @extend %vis-hide;
-// }
-// .feat-list {
-//   @extend %list;
-//   display: flex;
-//   gap: 30px;
-// }
+.features__title {
+  @extend %vis-hide;
+}
+.feat-list {
+  @extend %list;
+  @include tab-min {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 
-// .feat-list__item {
-//   width: 270px;
-// }
+.feat-list__item {
+  width: 450px;
+  @include mob-max {
+    width: calc(100vw - 30px);
+  }
+  @include tab-min {
+    width: 354px;
+  }
+  @include desk-min {
+    width: 270px;
+  }
+}
 
-// .feat-list__block {
-//   @include flex();
-//   margin-bottom: 30px;
-//   background: var(--secondary-bkg-color);
-//   border-radius: 4px;
-//   height: 120px;
-// }
-// .feat-list__icon {
-//   @extend %icon;
-// }
-// .feat-list__title {
-//   @include font(null, 14px, 1.14);
-//   @extend %title;
-//   text-transform: uppercase;
-//   margin-bottom: 10px;
-// }
+.feat-list__block {
+  @include flex();
+  margin-bottom: 30px;
+  background: var(--secondary-bkg-color);
+  border-radius: 4px;
+  height: 120px;
+}
+.feat-list__icon {
+  @extend %icon;
+}
+.feat-list__title {
+  @include font(null, 14px, 1.14);
+  @extend %title;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
