@@ -21,6 +21,11 @@
   @include mob-max {
     width: calc(100vw - 30px);
   }
+  @include tab-max {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
   @include tab-min {
     width: 354px;
   }
@@ -42,6 +47,10 @@
 .feat-list__title {
   @include font(null, 14px, 1.14);
   @extend %title;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
+  @include tab-min {
+    text-align: start;
+  }
 }

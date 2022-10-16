@@ -1,37 +1,46 @@
-// .ourteam {
-//   background-color: var(--secondary-bkg-color);
-// }
+.ourteam {
+  background-color: var(--secondary-bkg-color);
+}
 
-// .ourteam__title {
-//   @extend %title;
-//   text-align: center;
-//   margin-bottom: 50px;
-// }
+.ourteam__title {
+  @extend %title;
+  text-align: center;
+  margin-bottom: 30px;
+  @include desk-min {
+    margin-bottom: 50px;
+  }
+}
 
-// .ourteam__list {
-//   @extend %list;
-//   display: flex;
-//   gap: 30px;
-// }
+.ourteam__list {
+  @extend %list;
+  @include tab-min {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 
-// .ourteam__item {
-//   @extend %list;
-//   background-color: var(--primary-bkg-color);
-//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//     0px 2px 1px rgba(0, 0, 0, 0.2);
-//   border-radius: 0px 0px 4px 4px;
-// }
-// .ourteam__box {
-//   padding-top: 30px;
-//   padding-bottom: 30px;
-// }
-// .ourteam__name {
-//   @extend %title;
-//   @include font(500, 16px, 1.18);
-//   margin-bottom: 10px;
-//   text-align: center;
-// }
-// .ourteam__text {
-//   text-align: center;
-//   line-height: 1.18;
-// }
+.ourteam__item {
+  @extend %list;
+  background-color: var(--primary-bkg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.ourteam__box {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  @include desk-min {
+    padding-bottom: 30px;
+  }
+}
+.ourteam__name {
+  @extend %title;
+  @include font(500, 16px, 1.18);
+  margin-bottom: 10px;
+  text-align: center;
+}
+.ourteam__text {
+  text-align: center;
+  line-height: 1.18;
+}
