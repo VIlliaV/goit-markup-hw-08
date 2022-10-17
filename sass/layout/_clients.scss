@@ -12,8 +12,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  @include mob-min {
-    flex-basis: calc((100% - 4 * 15px) / 2);
+  flex-basis: calc((100% - 4 * 15px) / 2);
+  @include mob-max {
+    flex-basis: auto;
+    justify-content: center;
   }
   @include tab-min {
     flex-basis: calc((100% - 4 * 15px) / 4);

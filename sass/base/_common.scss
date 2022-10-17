@@ -56,9 +56,11 @@ button {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  @include mob-min {
-    width: 480px;
+  width: 480px;
+  @include mob-max {
+    width: auto;
   }
+
   @include tab-min {
     width: 768px;
   }
