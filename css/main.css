@@ -125,7 +125,6 @@ button {
 
 .logo {
   display: block;
-  text-align: center;
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -137,7 +136,6 @@ button {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    text-align: start;
   }
 }
 .logo__studio {
@@ -160,7 +158,13 @@ button {
 }
 
 .footer__logo {
+  text-align: center;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    text-align: start;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer__logo {
