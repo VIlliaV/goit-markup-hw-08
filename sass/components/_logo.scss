@@ -1,11 +1,13 @@
 .logo {
   display: block;
+  text-align: center;
   @extend %link;
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   @include font(700, 24px, 1.16);
   @include desk-min {
     @include font(700, 26px, 1.19);
+    text-align: start;
   }
   &__studio {
     color: #000000;
@@ -25,8 +27,8 @@
   color: var(--primary-bkg-color);
 }
 .footer__logo {
+  margin-bottom: 20px;
   @include tab-min {
-    margin-bottom: 20px;
     margin-right: 0px;
   }
 }
