@@ -1,3 +1,9 @@
+@mixin minimob {
+  @media screen and (max-width: 250px) {
+    @content;
+  }
+}
+
 @mixin mob-min {
   @media screen and (min-width: 480px) {
     @content;
