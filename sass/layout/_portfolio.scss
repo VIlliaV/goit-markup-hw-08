@@ -1,12 +1,22 @@
-// .portfolio__title {
-//   @extend %vis-hide;
-// }
-// .portfolio__radiobuttons {
-//   @extend %list;
-//   @include flex($alig: null);
-//   margin-bottom: 50px;
-//   gap: 8px;
-// }
+.portfolio__title {
+  @extend %vis-hide;
+}
+.portfolio__radiobuttons {
+  @extend %list;
+  @include flex($just: start, $alig: null);
+  flex-wrap: wrap;
+  flex-basis: 3;
+    gap: 8px;
+    margin-bottom: 40px;
+@include tab-min {
+    @include flex($alig: null);
+    margin-bottom: 30px;
+}
+
+    @include desk-min {
+        margin-bottom: 50px;
+    }
+}
 // .portfolio__radiobutton {
 //   padding: 6px 22px;
 //   @include font(500, null, 1.62);
