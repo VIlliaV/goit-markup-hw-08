@@ -5,83 +5,110 @@
   @extend %list;
   @include flex($just: start, $alig: null);
   flex-wrap: wrap;
-  flex-basis: 3;
-    gap: 8px;
-    margin-bottom: 40px;
-@include tab-min {
+  gap: 8px;
+
+  margin-bottom: 40px;
+  @include tab-max {
+    row-gap: 15px;
+    padding-right: 19px;
+  }
+  @include tab-min {
     @include flex($alig: null);
     margin-bottom: 30px;
+  }
+  @include desk-min {
+    margin-bottom: 50px;
+  }
 }
 
-    @include desk-min {
-        margin-bottom: 50px;
+.portfolio__radiobutton {
+  padding: 6px 22px;
+  @include font(500, null, 1.62);
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  background-color: var(--secondary-bkg-color);
+  border-radius: 4px;
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-bkg-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.projects {
+  @extend %list;
+  @include tab-min {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 30px;
+  }
+}
+.projects__item {
+  outline: 1px solid #eeeeee;
+  @include tab-max {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
+  }
+  @include tab-min {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+  @include desk-min {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  transition: box-shadow 250ms var(--cubic);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover .projects__text {
+    transform: translateY(0);
+  }
 }
-// .portfolio__radiobutton {
-//   padding: 6px 22px;
-//   @include font(500, null, 1.62);
-//   letter-spacing: 0.03em;
-//   color: var(--secondary-text-color);
-//   background-color: var(--secondary-bkg-color);
-//   border-radius: 4px;
-//   transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
-//     box-shadow 250ms var(--cubic);
 
-//   &:hover,
-//   &:focus {
-//     color: var(--primary-bkg-color);
-//     background-color: var(--accent-color);
-//     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-//       0px 2px 2px rgba(0, 0, 0, 0.12);
-//   }
-// }
+.projects__box-img {
+  position: relative;
+  overflow: hidden;
+}
+.projects__img {
+  @include mob-max {
+    width: calc(100vw - 30px);
+  }
+}
+.projects__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  @include font(null, 18px, 1.55);
+  padding: 77px 24px;
+  color: var(--primary-bkg-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform 250ms var(--cubic);
+  @include tab-min {
+    padding: 49px 24px;
+  }
+  @include desk-min {
+    padding: 63px 24px;
+  }
+}
+.projects__inner {
+  padding: 20px 24px;
+}
+.projects__title {
+  @extend %title;
+  @include font(null, 18px, 2);
+  text-align: left;
+  margin-bottom: 4px;
+}
 
-// .projects {
-//   @extend %list;
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 30px;
-// }
-// .projects__item {
-//   flex-basis: calc((100% - 60px) / 3);
-//   transition: box-shadow 250ms var(--cubic);
-//   &:hover {
-//     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-//       1px 4px 6px rgba(0, 0, 0, 0.16);
-//   }
-//   &:hover .projects__text {
-//     transform: translateY(0);
-//   }
-// }
-
-// .projects__img {
-//   position: relative;
-//   overflow: hidden;
-// }
-// .projects__text {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   @include font(null, 18px, 1.55);
-//   padding: 63px 24px;
-//   color: var(--primary-bkg-color);
-//   background-color: rgba(33, 150, 243, 0.9);
-//   transform: translateY(101%);
-//   transition: transform 250ms var(--cubic);
-// }
-// .projects__inner {
-//   padding: 20px 24px;
-//   border: 1px solid #eeeeee;
-//   border-top: none;
-// }
-// .projects__title {
-//   @extend %title;
-//   @include font(null, 18px, 2);
-//   text-align: left;
-//   margin-bottom: 4px;
-// }
-
-// .projects__choice {
-//   @include font(null, 16px, 1.87);
-// }
+.projects__choice {
+  @include font(null, 16px, 1.87);
+}

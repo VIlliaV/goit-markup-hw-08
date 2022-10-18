@@ -35,7 +35,6 @@
 .ourteam__img {
   @include mob-max {
     width: calc(100vw - 30px);
-    margin: 0px;
   }
 }
 .ourteam__box {
