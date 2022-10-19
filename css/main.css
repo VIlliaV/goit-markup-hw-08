@@ -968,6 +968,12 @@ button {
   width: 210px;
   height: 92px;
 }
+@media screen and (max-width: 479px) {
+  .clients__link {
+    width: calc((100vw - 60px) / 2);
+    height: calc((100vw - 60px) / 4.56);
+  }
+}
 .clients__link:hover, .clients__link:focus {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
@@ -985,6 +991,13 @@ button {
 @media screen and (min-width: 1200px) {
   .clients__link {
     width: 170px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .clients__icon {
+    width: 50.4%;
+    height: 65.2%;
   }
 }
 

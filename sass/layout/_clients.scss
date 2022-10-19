@@ -29,6 +29,10 @@
   transition: color 250ms var(--cubic), border 250ms var(--cubic);
   width: 210px;
   height: 92px;
+  @include mob-max {
+      width: calc((100vw - 2 * 30px)/2);
+      height: calc((100vw - 2 * 30px)/4.56);
+    }
 
   &:hover,
   &:focus {
@@ -47,4 +51,8 @@
 }
 .clients__icon {
   @extend %icon;
+  @include mob-max {
+      width: 50.4%;
+      height: 65.2%;
+    }
 }
