@@ -6,13 +6,19 @@
 }
 
 .userdata {
+  @include tab-max {
+    padding: 2px 32px 32px;
+  }
   padding: 40px;
 }
 .userdata__title {
-  @include font(700, 20px, 1.15);
+  @include font(700, 20px, 1.5);
   text-align: center;
   color: var(--secondary-text-color);
   margin-bottom: 12px;
+  @include desk-min {
+    line-height: 1.15;
+  }
 }
 .userdata__list {
   @extend %list;
@@ -90,10 +96,16 @@
     border-color: transparent;
   }
 }
-.applybox__conditions{
-    position: relative;
+.applybox__conditions {
+  position: relative;
+  @include desk-max {
+    @include font(null, 12px, 1.16);
+  }
 }
 .applybox__link {
+  @include desk-max {
+    @include font(null, 12px, 1.16);
+  }
   color: var(--accent-color);
 }
 .applybox__check-icon {

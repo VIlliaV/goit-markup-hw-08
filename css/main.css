@@ -127,8 +127,14 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
+  overflow-y: scroll;
   -webkit-transition: opacity 1000ms var(--cubic), visibility 1000ms var(--cubic);
   transition: opacity 1000ms var(--cubic), visibility 1000ms var(--cubic);
+}
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
 }
 
 .backdrop--is-hidden {
@@ -143,12 +149,10 @@ button {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  max-width: 44vw;
-  max-height: 581px;
+  width: 450px;
+  min-height: 609px;
+  padding: 8px;
+  margin: 0 auto;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -157,6 +161,37 @@ button {
   transition: -webkit-transform 1000ms var(--cubic);
   transition: transform 1000ms var(--cubic);
   transition: transform 1000ms var(--cubic), -webkit-transform 1000ms var(--cubic);
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    width: calc(100vw - 30px);
+  }
+}
+@media screen and (max-width: 250px) {
+  .modal {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
+@media screen and (max-height: 600px) and (min-width: 768px) {
+  .modal {
+    top: 0;
+    translate: -50% 0%;
+  }
 }
 
 .logo {
@@ -237,7 +272,7 @@ button {
 }
 
 .btn-close {
-  position: absolute;
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,13 +291,20 @@ button {
   -webkit-transition: color 250ms var(--cubic);
   transition: color 250ms var(--cubic);
 }
+@media screen and (min-width: 768px) {
+  .btn-close {
+    position: absolute;
+  }
+}
 .btn-close:hover, .btn-close:focus {
   color: var(--accent-color);
 }
 
-.modal__btn-close {
-  top: 8px;
-  right: 8px;
+@media screen and (min-width: 768px) {
+  .modal__btn-close {
+    top: 8px;
+    right: 8px;
+  }
 }
 
 .social {
@@ -323,14 +365,24 @@ button {
 .userdata {
   padding: 40px;
 }
+@media screen and (max-width: 767px) {
+  .userdata {
+    padding: 2px 32px 32px;
+  }
+}
 
 .userdata__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--secondary-text-color);
   margin-bottom: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .userdata__title {
+    line-height: 1.15;
+  }
 }
 
 .username__text {
@@ -501,9 +553,21 @@ button {
 .applybox__conditions {
   position: relative;
 }
+@media screen and (max-width: 1199px) {
+  .applybox__conditions {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
 
 .applybox__link {
   color: var(--accent-color);
+}
+@media screen and (max-width: 1199px) {
+  .applybox__link {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 
 .applybox__check-icon {

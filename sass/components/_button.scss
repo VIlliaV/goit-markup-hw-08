@@ -27,7 +27,11 @@
 }
 
 .btn-close {
-  position: absolute;
+  margin-left: auto;
+  @include tab-min {
+    position: absolute;
+  }
+
   @include flex();
   width: 30px;
   height: 30px;
@@ -37,9 +41,9 @@
   color: #000000;
   transition: color 250ms var(--cubic);
 
-&__icon {
-  @extend %icon;
-}
+  &__icon {
+    @extend %icon;
+  }
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -47,6 +51,8 @@
 }
 
 .modal__btn-close {
-  top: 8px;
-  right: 8px;
+  @include tab-min {
+    top: 8px;
+    right: 8px;
+  }
 }

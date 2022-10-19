@@ -1,4 +1,7 @@
 .backdrop {
+  @include tab-max {
+    padding: 93px 15px;
+  }
   position: fixed;
   top: 0;
   left: 0;
@@ -6,6 +9,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
+  overflow-y: scroll;
   transition: opacity 1000ms var(--cubic), visibility 1000ms var(--cubic);
 }
 
@@ -19,15 +23,38 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  max-width: 44vw;
-  max-height: 581px;
+  width: 450px;
+  min-height: 609px;
+  padding: 8px;
+  margin: 0 auto;
+
+  @include mob-max {
+    width: calc(100vw - 30px);
+  }
+  @include minimob {
+    width: 210px;
+  }
+  @include tab-min {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 0px;
+  }
+
+  @include desk-min {
+    width: 528px;
+    height: 581px;
+  }
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 1000ms var(--cubic);
+  @media screen and (max-height: 600px) {
+    @include tab-min {
+      top: 0;
+      translate: -50% 0%;
+    }
+  }
 }
