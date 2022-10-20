@@ -234,12 +234,12 @@ button {
 }
 @media screen and (min-width: 768px) {
   .footer__logo {
-    text-align: start;
+    margin-right: 0px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer__logo {
-    margin-right: 0px;
+    text-align: start;
   }
 }
 
@@ -685,6 +685,7 @@ button {
 .js-menu-container.is-open {
   display: block;
   position: absolute;
+  z-index: 100000;
   top: 0%;
   left: 0%;
   width: 100vw;
@@ -697,7 +698,7 @@ button {
 }
 
 .nav--mob {
-  margin-bottom: 38vh;
+  margin-bottom: 302px;
 }
 @media screen and (min-width: 768px) {
   .nav {

@@ -17,6 +17,7 @@
   &.is-open {
     display: block;
     position: absolute;
+    z-index: 100000;
     top: 0%;
     left: 0%;
     width: 100vw;
@@ -30,7 +31,7 @@
 }
 .nav {
   &--mob {
-    margin-bottom: 38vh;
+    margin-bottom: 302px;
   }
   @include tab-min {
     @include flex($just: null);
